@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/common/template :: header(~{::title},~{::link},~{::style})">
+</head>
+<body>
+    <div class="timo-detail-page">
+        <div class="timo-detail-title">基本信息</div>
+        <table class="layui-table timo-detail-table">
+            <colgroup>
+                <col width="100px"><col>
+                <col width="100px"><col>
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th>主键ID</th>
+                    <td th:text="${showPage.id}"></td>
+                    <th>标题</th>
+                    <td th:text="${showPage.title}"></td>
+                </tr>
+                <tr>
+                    <th>网站标题</th>
+                    <td th:text="${showPage.web_title}"></td>
+                    <th>网站名称</th>
+                    <td th:text="${showPage.web_name}"></td>
+                </tr>
+                <tr>
+                    <th>网站邮箱</th>
+                    <td th:text="${showPage.web_email}"></td>
+                    <th>网站logo</th>
+                    <td th:text="${showPage.web_logo}"></td>
+                </tr>
+                <tr>
+                    <th>关键字</th>
+                    <td th:text="${showPage.web_keywords}"></td>
+                    <th>网站描述</th>
+                    <td th:text="${showPage.web_desc}"></td>
+                </tr>
+                <tr>
+                    <th>网站所有权</th>
+                    <td th:text="${showPage.web_author}" colspan="3"></td>
+                </tr>
+                <tr>
+                    <th>创建者</th>
+                    <td th:text="${showPage.createBy?.nickname}"></td>
+                    <th>更新者</th>
+                    <td th:text="${showPage.updateBy?.nickname}"></td>
+                </tr>
+                <tr>
+                    <th>创建时间</th>
+                    <td th:text="${#dates.format(showPage.createDate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                    <th>更新时间</th>
+                    <td th:text="${#dates.format(showPage.updateDate, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                </tr>
+                <tr>
+                    <th>备注</th>
+                    <td th:text="${showPage.remark}" colspan="3"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<script th:replace="/common/template :: script"></script>
+</body>
+</html>

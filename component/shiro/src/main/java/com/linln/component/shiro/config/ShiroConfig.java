@@ -49,11 +49,13 @@ public class ShiroConfig {
          * 	—user 认证和自动登录可访问
          */
         LinkedHashMap<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/indexpage/index/index", "anon");
+//        filterMap.put("/indexpage/**", "anon");
+        filterMap.put("/indexpage/**", "anon");
         filterMap.put("/login", "anon");
         filterMap.put("/logout", "anon");
         filterMap.put("/captcha", "anon");
         filterMap.put("/noAuth", "anon");
+        filterMap.put("/static/**", "anon");
         filterMap.put("/css/**", "anon");
         filterMap.put("/js/**", "anon");
         filterMap.put("/images/**", "anon");
