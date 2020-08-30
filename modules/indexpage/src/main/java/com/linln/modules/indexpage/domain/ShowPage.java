@@ -48,6 +48,8 @@ public class ShowPage implements Serializable {
     private String web_name;
     // 网站邮箱
     private String web_email;
+    //手机号
+    private String web_phone;
     // 网站logo
     private String web_logo;
     // 关键字
@@ -56,6 +58,8 @@ public class ShowPage implements Serializable {
     private String web_desc;
     // 网站所有权
     private String web_author;
+    // icp
+    private String web_icp;
     // 备注
     private String remark;
     // 创建时间

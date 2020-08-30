@@ -63,8 +63,9 @@ public class IndexController {
         model.addAttribute("web_keywords", showPageAttr.getWeb_keywords());
         model.addAttribute("web_name", showPageAttr.getWeb_name());
         model.addAttribute("web_email", showPageAttr.getWeb_email());
-        model.addAttribute("web_phone", showPageAttr.getWeb_email());
+        model.addAttribute("web_phone", showPageAttr.getWeb_phone());
         model.addAttribute("web_author", showPageAttr.getWeb_author());
+        model.addAttribute("web_icp", showPageAttr.getWeb_icp());
         model.addAttribute("web_logo", showPageAttr.getWeb_logo());
         model.addAttribute("web_title", showPageAttr.getWeb_title());
         return "/indexpage/index/index";
